@@ -1,0 +1,108 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+:root,
+[data-theme] {
+    background: hsl(var(--b2));
+}
+
+body {
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+.btn {
+    @apply shadow-md;
+}
+
+.btn.btn-ghost {
+    @apply shadow-none;
+}
+
+.dice-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.dice {
+    border: 1px solid rgb(23, 213, 16);
+    padding: 25px;
+    width: 120px;
+    height: 120px;
+}
+
+.dice-inner {
+    height: 100%;
+    position: relative;
+}
+
+.dot {
+    border-radius: 50%;
+    background-color: white;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+}
+
+.dice-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+
+/* dot styling */
+
+.top-left {
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+}
+
+.middle-left {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.middle-right {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+}
